@@ -1,7 +1,6 @@
 #include <Arduino.h>
 #include <SimpleDHT.h>
 
-// Pin konfigurace
 #define DHT_PIN 3
 #define SOIL_MOISTURE_PIN A0
 #define WATER_PUMP_RELAY_PIN 8
