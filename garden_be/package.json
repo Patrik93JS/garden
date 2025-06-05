@@ -6,13 +6,16 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "nodemon --exec ts-node src/index.ts",
-		"dev": "nodemon --exec ts-node-dev --respawn src/index.ts"
+		"dev": "nodemon --exec ts-node-dev --respawn src/index.ts",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"type": "commonjs",
 	"dependencies": {
+		"@koa/router": "^13.1.0",
 		"@types/koa": "^2.15.0",
 		"dotenv": "^16.5.0",
 		"koa": "^3.0.0",
@@ -23,5 +26,16 @@
 		"ts-node": "^10.9.2",
 		"ts-node-dev": "^2.0.0",
 		"typescript": "^5.8.3"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.28.0",
+		"@types/koa__router": "^12.0.4",
+		"@types/koa-bodyparser": "^4.3.12",
+		"@types/koa-router": "^7.4.8",
+		"eslint": "^9.28.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^7.2.1",
+		"globals": "^16.2.0",
+		"typescript-eslint": "^8.33.1"
 	}
 }
