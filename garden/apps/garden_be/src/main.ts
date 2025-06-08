@@ -1,14 +1,29 @@
-import koa from 'koa';
+import Koa from 'koa';
+import Router from 'koa-router';
+import bodyParser from 'koa-bodyparser';
 
-const host = process.env.HOST ?? 'localhost';
-const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+const app = new Koa({ proxy: true });
 
-const app = new koa();
+const PORT = process.env.PORT || 8000;
 
-app.use(async (ctx) => {
-  ctx.body = { message: 'Hello API' };
+const router = new Router();
+
+router.get('/', async (ctx) => {
+  const name = ctx.query.name || 'Tomku';
+  ctx.body = {
+    message: `Hello, ${name}!`,
+  };
 });
 
-app.listen(port, host, () => {
-  console.log(`[ ready ] http://${host}:${port}`);
+router.get('/garden', async (ctx) => {
+  const name = ctx.query.name || 'Tomku';
+  ctx.body = {
+    message: `Jdem na to, ${name}!`,
+  };
 });
+
+app
+  .use(bodyParser())
+  .use(router.routes())
+  .use(router.allowedMethods())
+  .listen(PORT, () => console.log(`listening on http://localhost:${PORT}...`));
