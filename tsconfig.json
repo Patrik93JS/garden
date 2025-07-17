@@ -1,13 +1,19 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compileOnSave": false,
-  "files": [],
-  "references": [
-    {
-      "path": "./apps/garden_fe"
-    },
-    {
-      "path": "./apps/garden_be"
-    }
-  ]
+    "extends": "./tsconfig.base.json",
+    "compileOnSave": false,
+    "files": [],
+    "references": [
+        {
+            "path": "./apps/garden_fe"
+        },
+        {
+            "path": "./apps/garden_be"
+        },
+        {
+            "path": "./apps/libs/utils"
+        },
+        {
+            "path": "./apps/libs/ui"
+        }
+    ]
 }

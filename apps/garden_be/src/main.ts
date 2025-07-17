@@ -1,10 +1,6 @@
-import Koa from 'koa';
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
-
-const app = new Koa({ proxy: true });
-
-const PORT = process.env.PORT || 8000;
+import { app, PORT } from '@garden/utils';
 
 const router = new Router();
 
