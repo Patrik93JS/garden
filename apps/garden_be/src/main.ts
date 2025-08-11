@@ -1,6 +1,9 @@
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
-import { app, PORT } from '@garden/utils';
+import { PORT } from '@garden/utils';
+import Koa from 'koa';
+
+export const app = new Koa({ proxy: true });
 
 const router = new Router();
 

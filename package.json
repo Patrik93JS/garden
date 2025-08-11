@@ -4,7 +4,7 @@
     "license": "MIT",
     "scripts": {
         "start": "nx run-many --target=serve --projects=garden_be,garden_fe --parallel --verbose",
-        "build:all": "nx run-many --target=build --projects=garden_be,garden_fe,gardenIoT_sw --parallel"
+        "build:all": "nx run-many --target=build --projects=garden_be,garden_fe --parallel --verbose"
     },
     "private": true,
     "devDependencies": {
