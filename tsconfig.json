@@ -4,9 +4,6 @@
     "files": [],
     "references": [
         {
-            "path": "./apps/garden_fe"
-        },
-        {
             "path": "./apps/garden_be"
         },
         {
@@ -14,6 +11,9 @@
         },
         {
             "path": "./apps/libs/ui"
+        },
+        {
+            "path": "./garden_fe"
         }
     ]
 }
